@@ -15,7 +15,7 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <h1 class="text-center">PG-ification</h1>
-      <p class="text-center">Upon entering text and hitting <code>spacebar</code>, <code>enter</code>, or <code>tab</code>, all user input will be transformed into the boring text of the Communist Manifesto. Any content whatsoever (regardless of perceived levels of immorality and general offensiveness) will undergo translation in order to guarantee that any perverted or gratuitous story will be converted into the false but inert (and therefore, relatively harmless) utterances of Karl Marx.</p>
+      <p class="text-center">Upon entering text and hitting <code>spacebar</code> or <code>enter</code>, all user input will be transformed into the boring text of the Communist Manifesto. Any content whatsoever (regardless of perceived levels of immorality and general offensiveness) will undergo translation in order to guarantee that any perverted or gratuitous story will be converted into the false but inert (and therefore, relatively harmless) utterances of Karl Marx.</p>
     </div>
   </div>
 
@@ -38,8 +38,8 @@
 
   $('textarea').keyup(function(e){
 
-      //detect spacebar, enter key, or tab key
-     if(e.keyCode == 32 || e.keyCode == 13 || e.keyCode == 9){
+      //detect spacebar or enter key
+     if(e.keyCode == 32 || e.keyCode == 13){
 
          item = communist.splice(0, 1);
          newArray.push(item);
