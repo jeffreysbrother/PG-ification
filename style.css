@@ -35,6 +35,7 @@ button.clear {
   background-color: #87CEFA;
   /*background-color: #8FBC8F;*/
   border: none;
+  border-bottom: 3px solid #7cbde6;
   padding: 10px 30px;
   font-weight: bold;
   font-size: 16px;
@@ -44,6 +45,7 @@ button.clear {
 
 button:hover {
   background-color: #FFB6C1;
+  border-bottom: 3px solid #e6a4ae;
 }
 
 button:focus {
