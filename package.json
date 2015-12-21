@@ -1,0 +1,27 @@
+{
+  "name": "pg-ification",
+  "version": "1.0.0",
+  "description": "text input is converted to text of Communist Manifesto",
+  "main": "index.html",
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffreysbrother/PG-ification.git"
+  },
+  "keywords": [
+    "translation",
+    "Marx"
+  ],
+  "author": "James Cool",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffreysbrother/PG-ification/issues"
+  },
+  "homepage": "https://github.com/jeffreysbrother/PG-ification#readme"
+}
