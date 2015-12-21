@@ -6,6 +6,12 @@ textarea {
   border-radius: 4px;
   margin-top: 15px;
   margin-bottom: 15px;
+  padding: 6px;
+  font-weight: bold;
+}
+
+textarea:focus {
+  outline-color: #87CEFA;
 }
 
 h1 {
