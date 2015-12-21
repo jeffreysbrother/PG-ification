@@ -9,7 +9,7 @@ h1 {
   padding: 15px;
 }
 
-p {
-  /*padding: 10px;*/
+p:last-of-type {
+  padding-bottom: 15px;
   font-size: 16px;
 }
