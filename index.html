@@ -22,6 +22,8 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <textarea name="name"></textarea>
+      <p class="tiny">e.g., try typing "the woman with greasy legs stumbled into the lesbian bar carrying two pounds of meat and a freshly-printed speeding ticket."</p>
+      <button class="clear">Clear Input</button>
     </div>
   </div>
 </div>
@@ -30,7 +32,7 @@
 
 <script>
 
-  var communist = ["In ", "the ", "earlier ", "epochs ", "of ", "history ", "we ", "find ", "almost "];
+  var communist = ["In ", "the ", "earlier ", "epochs ", "of ", "history, ", "we ", "find ", "almost ", "everywhere ", "a ", "complicated ", "arrangement ", "of ", "society ", "into ", "various ", "orders, ", "a ", "manifold ", "gradation ", "of ", "social ", "rank. "];
   var newArray = [];
   var item;
 
@@ -44,6 +46,10 @@
          $('textarea').val(newArray.join(''));
 
      }
+  });
+
+  $('.clear').click(function(){
+    $('textarea').val('');
   });
 
 
