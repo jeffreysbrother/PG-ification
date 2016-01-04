@@ -29,10 +29,12 @@
 </div>
 
 <script src="jquery-2.1.4.min.js" charset="utf-8"></script>
+<script src="communist.js"></script>
 
 <script>
 
-  var communist = ["In ", "the ", "earlier ", "epochs ", "of ", "history, ", "we ", "find ", "almost ", "everywhere ", "a ", "complicated ", "arrangement ", "of ", "society ", "into ", "various ", "orders, ", "a ", "manifold ", "gradation ", "of ", "social ", "rank. "];
+  communistArray = communist.split(' ');
+
   var newArray = [];
   var item;
 
@@ -41,19 +43,30 @@
       //detect spacebar or enter key
      if(e.keyCode == 32 || e.keyCode == 13){
 
-         item = communist.splice(0, 1);
+         item = communistArray.splice(0, 1);
          newArray.push(item);
-         $('textarea').val(newArray.join(''));
+         $('textarea').val(newArray.join(' '));
 
      }
+
   });
 
-  //clear textarea when button is clicked, empty newArray, re-populate communist array
+  //deal with pasting events
+  $('textarea').on('paste', function() {
+    console.log('text pasted!');
+  });
+
+
+
+
+
+  //clear textarea when button is clicked, empty newArray, reset the communistArray
   $('.clear').click(function(){
     $('textarea').val('');
     newArray = [];
 
-    communist = ["In ", "the ", "earlier ", "epochs ", "of ", "history, ", "we ", "find ", "almost ", "everywhere ", "a ", "complicated ", "arrangement ", "of ", "society ", "into ", "various ", "orders, ", "a ", "manifold ", "gradation ", "of ", "social ", "rank. "];
+    //this will reset the array
+    communistArray = communist.split(' ');
   });
 
 
