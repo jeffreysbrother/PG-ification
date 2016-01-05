@@ -34,6 +34,12 @@
 <script>
 
   communistArray = communist.split(' ');
+  //adds a space after every element in the array
+  //but this also causes length property to come out wrong
+  //(this is compensated for later on)
+  for(var i = 0; i < communistArray.length; i++){
+    communistArray[i] = communistArray[i] + " ";
+  }
 
   var newArray = [];
   var item;
@@ -47,9 +53,9 @@
 
          item = communistArray.splice(0, 1);
          newArray.push(item);
-         $('textarea').val(newArray.join(' '));
+         $('textarea').val(newArray.join(''));
         //  lengthOfContent = $('textarea').val().length;
-         lengthOfContent = $('textarea').val().split(' ').length;
+         lengthOfContent = $('textarea').val().split(' ').length - 1;
 
      }
 
@@ -73,6 +79,9 @@
 
     //this will reset the array
     communistArray = communist.split(' ');
+    for(var i = 0; i < communistArray.length; i++){
+      communistArray[i] = communistArray[i] + " ";
+    }
   });
 
 
