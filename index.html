@@ -43,15 +43,17 @@
 
   var newArray = [];
   var item;
+  var items = [];
   var lengthOfContent;
   var totalLength;
+  var lengthOfPaste;
 
   $('textarea').keyup(function(e){
 
       //detect spacebar or enter key
      if(e.keyCode == 32 || e.keyCode == 13){
 
-         item = communistArray.splice(0, 1);
+         item = communistArray.splice(0, 1).toString();
          newArray.push(item);
          $('textarea').val(newArray.join(''));
         //  lengthOfContent = $('textarea').val().length;
@@ -65,7 +67,10 @@
   //deal with pasting events
   $('textarea').on('paste', function() {
     // console.log('text pasted!');
-    totalLength = $('textarea').val().split(' ').length;
+    lengthOfPaste = $('textarea').val().split(' ').length - 1;
+    items = communistArray.splice(0, lengthOfPaste).toString();
+    // newArray.push(items);
+    // $('textarea').val(newArray.join(''));
   });
 
 
