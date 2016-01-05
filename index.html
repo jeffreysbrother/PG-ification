@@ -37,6 +37,8 @@
 
   var newArray = [];
   var item;
+  var lengthOfContent;
+  var totalLength;
 
   $('textarea').keyup(function(e){
 
@@ -46,14 +48,18 @@
          item = communistArray.splice(0, 1);
          newArray.push(item);
          $('textarea').val(newArray.join(' '));
+        //  lengthOfContent = $('textarea').val().length;
+         lengthOfContent = $('textarea').val().split(' ').length;
 
      }
 
   });
 
+
   //deal with pasting events
   $('textarea').on('paste', function() {
-    console.log('text pasted!');
+    // console.log('text pasted!');
+    totalLength = $('textarea').val().split(' ').length;
   });
 
 
