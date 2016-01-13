@@ -43,11 +43,13 @@ button.clear {
   border-radius: 4px;
   transition: background-color 0.2s ease;
 }
+    
 
 button:hover {
   background-color: #FFB6C1;
   border-bottom: 3px solid #e6a4ae;
 }
+
 
 button:focus {
   outline:0;
